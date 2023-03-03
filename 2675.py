@@ -1,6 +1,12 @@
-while True:
-	try: #언제까지 입력받을 지 모르기 때문에 try 함수를 사용해 용량만큼 한 뒤 except로 넘어감
-		a,b=map(int,input().split(' '))
-		print(a+b)
-	except:
-		break
+num = int(input())
+
+S = []
+for _ in range(num):
+	a,b = input().split(' ')
+	S.append(a)
+	S.append(b)
+
+for i in range(1,(num*2),2):
+	for j in S[i]:
+		print(j*int(S[i-1]),end='')
+	print('')
